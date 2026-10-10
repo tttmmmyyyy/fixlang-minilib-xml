@@ -205,9 +205,9 @@ test_parse_pi = (
         [
             ("<?target?>", ok("target")),
             ("<?:AZaz09-.?>", ok(":AZaz09-.")),
-            ("<?_AZaz09-.?>", ok("_AZaz09-.")),
-            ("<?_AZaz09$.?>", err("Missing '?>'")),
-            ("<?_AZaz09 $.?>", ok("_AZaz09 $.")),
+            ("<?__AZaz09-.?>", ok("__AZaz09-.")),
+            ("<?__AZaz09$.?>", err("Missing '?>'")),
+            ("<?__AZaz09 $.?>", ok("__AZaz09 $.")),
             ("<?target abc ???>", ok("target abc ??")),
             ("<?target abc ???", err("Missing '?>'")),
             ("<?xml version='1.1'?>", err("NotMatch")),
